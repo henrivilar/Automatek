@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font: 'Noto Sans';
+    --cor1: #d9dee5;
+    --cor2: #1d3e58;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav {
+    background-color: var(--cor1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#logo-vertical {
+    width: 250px;
+    padding: 16px;
+}
+
+#logo-vertical:hover {
+    cursor: pointer;
+    scale: 1.05;
+    transition: 0.5s ease-in-out;
+}
+
+.links {
+
+}
+
+.links a {
+    text-decoration: none;
+    color: var(--cor2);
+    font-family: var(--font);
+    font-weight: bold;
+    position: relative;
+    margin-left: 16px;
+}
+
+.links a::after {
+    content: ' ';
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.links a:hover::after {
+    width: 75%;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 0;
+}
+
+.text {
+    font-family: var(--font);
+    font-size: 24px;
+    color: var(--cor2);
+    margin-left: 96px;
+}
+
+.image {
+    margin-right: 96px;
+}
+
+.image img {
+    width: 500px;
+}
+
+.image img:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.5s ease-in-out;
+}
+
+footer {
+    background-color: var(--cor1);
+    font-family: var(--font);
+    color: var(--cor2);
+    text-align: center;
+    padding: 16px;
+}
